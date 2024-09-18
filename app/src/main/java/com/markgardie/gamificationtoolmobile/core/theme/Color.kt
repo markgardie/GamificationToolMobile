@@ -1,4 +1,4 @@
-package com.markgardie.gamificationtoolmobile.ui.theme
+package com.markgardie.gamificationtoolmobile.core.theme
 
 import androidx.compose.ui.graphics.Color
 
