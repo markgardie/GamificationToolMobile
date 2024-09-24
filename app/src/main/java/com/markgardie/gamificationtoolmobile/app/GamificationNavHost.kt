@@ -7,8 +7,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.rememberNavController
-import com.markgardie.gamificationtoolmobile.some_feature.someScreenDestination
-import com.markgardie.gamificationtoolmobile.some_feature.someScreenRoute
+import com.markgardie.gamificationtoolmobile.dashboard.dashboardDestination
+import com.markgardie.gamificationtoolmobile.dashboard.dashboardScreenRoute
 
 
 @Composable
@@ -24,10 +24,10 @@ fun GamificationNavHost() {
 
         NavHost(
             navController = navController,
-            startDestination = someScreenRoute,
+            startDestination = dashboardScreenRoute,
         ) {
 
-            someScreenDestination()
+            dashboardDestination()
 
 
         }
