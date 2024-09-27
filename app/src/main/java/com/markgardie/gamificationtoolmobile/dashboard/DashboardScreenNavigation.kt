@@ -13,6 +13,7 @@ fun NavController.navigateToDashboard() {
 
 
 fun NavGraphBuilder.dashboardDestination(
+    dashboardViewModel: DashboardViewModel
 ) {
 
     composable(
@@ -20,6 +21,6 @@ fun NavGraphBuilder.dashboardDestination(
 
         ) {
 
-        DashboardScreenWrapper()
+        DashboardScreenWrapper(dashboardViewModel)
     }
 }
