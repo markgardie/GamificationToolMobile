@@ -1,7 +1,8 @@
-package com.markgardie.gamificationtoolmobile.app
+package com.markgardie.gamificationtoolmobile.app.di
 
 import android.content.Context
 import androidx.room.Room
+import com.markgardie.gamificationtoolmobile.app.GamificationDatabase
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
