@@ -8,7 +8,6 @@ import javax.inject.Inject
 
 class NetworkAuthRepository @Inject constructor(
     private val apiService: AuthApiService,
-    private val tokenManager: TokenManager
 ): AuthRepository {
 
     override suspend fun login(login: String, password: String): NetworkResult<Unit> {
