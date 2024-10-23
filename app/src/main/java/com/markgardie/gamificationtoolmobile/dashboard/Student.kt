@@ -1,4 +1,4 @@
-package com.markgardie.gamificationtoolmobile.auth
+package com.markgardie.gamificationtoolmobile.dashboard
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
