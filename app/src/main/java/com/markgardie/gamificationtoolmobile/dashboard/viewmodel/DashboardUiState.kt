@@ -1,4 +1,6 @@
-package com.markgardie.gamificationtoolmobile.dashboard
+package com.markgardie.gamificationtoolmobile.dashboard.viewmodel
+
+import com.markgardie.gamificationtoolmobile.dashboard.model.PointSystem
 
 sealed interface DashboardUiState {
 

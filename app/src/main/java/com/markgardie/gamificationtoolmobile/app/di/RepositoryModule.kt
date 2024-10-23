@@ -1,7 +1,7 @@
 package com.markgardie.gamificationtoolmobile.app.di
 
-import com.markgardie.gamificationtoolmobile.dashboard.DashboardRepository
-import com.markgardie.gamificationtoolmobile.dashboard.TestDashboardRepository
+import com.markgardie.gamificationtoolmobile.dashboard.repository.DashboardRepository
+import com.markgardie.gamificationtoolmobile.dashboard.repository.TestDashboardRepository
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn

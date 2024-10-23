@@ -2,8 +2,8 @@ package com.markgardie.gamificationtoolmobile.auth.repository
 
 import com.markgardie.gamificationtoolmobile.auth.util.TokenManager
 import com.markgardie.gamificationtoolmobile.auth.api_service.AuthApiService
-import com.markgardie.gamificationtoolmobile.auth.models.LoginRequest
-import com.markgardie.gamificationtoolmobile.core.models.NetworkResult
+import com.markgardie.gamificationtoolmobile.auth.model.LoginRequest
+import com.markgardie.gamificationtoolmobile.core.model.NetworkResult
 import javax.inject.Inject
 
 class NetworkAuthRepository @Inject constructor(

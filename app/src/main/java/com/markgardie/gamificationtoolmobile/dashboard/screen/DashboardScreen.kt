@@ -1,4 +1,4 @@
-package com.markgardie.gamificationtoolmobile.dashboard
+package com.markgardie.gamificationtoolmobile.dashboard.screen
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -19,6 +19,9 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import com.markgardie.gamificationtoolmobile.dashboard.model.PointSystem
+import com.markgardie.gamificationtoolmobile.dashboard.viewmodel.DashboardUiState
+import com.markgardie.gamificationtoolmobile.dashboard.viewmodel.DashboardViewModel
 
 
 @OptIn(ExperimentalMaterial3Api::class)

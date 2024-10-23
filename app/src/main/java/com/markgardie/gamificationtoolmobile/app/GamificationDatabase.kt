@@ -2,8 +2,8 @@ package com.markgardie.gamificationtoolmobile.app
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
-import com.markgardie.gamificationtoolmobile.dashboard.Student
-import com.markgardie.gamificationtoolmobile.dashboard.PointSystem
+import com.markgardie.gamificationtoolmobile.dashboard.model.Student
+import com.markgardie.gamificationtoolmobile.dashboard.model.PointSystem
 
 @Database(
     entities = [PointSystem::class, Student::class],

@@ -1,6 +1,6 @@
 package com.markgardie.gamificationtoolmobile.auth.repository
 
-import com.markgardie.gamificationtoolmobile.core.models.NetworkResult
+import com.markgardie.gamificationtoolmobile.core.model.NetworkResult
 
 interface AuthRepository {
 

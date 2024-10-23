@@ -8,9 +8,9 @@ import androidx.compose.ui.Modifier
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.rememberNavController
-import com.markgardie.gamificationtoolmobile.dashboard.DashboardViewModel
-import com.markgardie.gamificationtoolmobile.dashboard.dashboardDestination
-import com.markgardie.gamificationtoolmobile.dashboard.dashboardScreenRoute
+import com.markgardie.gamificationtoolmobile.dashboard.viewmodel.DashboardViewModel
+import com.markgardie.gamificationtoolmobile.dashboard.navigation.dashboardDestination
+import com.markgardie.gamificationtoolmobile.dashboard.navigation.dashboardScreenRoute
 
 
 @Composable

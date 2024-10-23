@@ -1,4 +1,4 @@
-package com.markgardie.gamificationtoolmobile.auth.models
+package com.markgardie.gamificationtoolmobile.auth.model
 
 import kotlinx.serialization.SerialName
 

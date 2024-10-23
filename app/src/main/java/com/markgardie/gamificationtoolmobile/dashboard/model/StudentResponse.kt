@@ -1,4 +1,4 @@
-package com.markgardie.gamificationtoolmobile.dashboard
+package com.markgardie.gamificationtoolmobile.dashboard.model
 
 import kotlinx.serialization.SerialName
 

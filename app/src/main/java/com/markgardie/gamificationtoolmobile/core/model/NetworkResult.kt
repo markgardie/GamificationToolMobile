@@ -1,4 +1,4 @@
-package com.markgardie.gamificationtoolmobile.core.models
+package com.markgardie.gamificationtoolmobile.core.model
 
 import kotlinx.serialization.Serializable
 
