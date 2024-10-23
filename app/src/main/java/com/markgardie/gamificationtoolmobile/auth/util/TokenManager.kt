@@ -7,6 +7,9 @@ object TokenManager {
     fun saveToken(newToken: String) {
         token = newToken
     }
-
     fun getToken(): String? = token
+
+    fun clearToken() {
+        token = null
+    }
 }
