@@ -66,15 +66,21 @@ fun AuthScreenWrapper(
 
         when (uiState) {
             is AuthUiState.Initial -> AuthScreen(
-                viewModel = viewModel,
                 showError = showError,
-                errorMessage = errorMessage
+                errorMessage = errorMessage,
+                onLogin = viewModel::login,
             )
             is AuthUiState.Success -> onAuthSuccess()
             is AuthUiState.Loading -> LoadingState(innerPadding = innerPadding)
             is AuthUiState.Error -> {
                 showError = true
                 errorMessage = (uiState as AuthUiState.Error).message
+
+                AuthScreen(
+                    showError = showError,
+                    errorMessage = errorMessage,
+                    onLogin = viewModel::login,
+                )
             }
 
         }
@@ -87,8 +93,8 @@ fun AuthScreenWrapper(
 @Composable
 fun AuthScreen(
     showError: Boolean,
-    viewModel: AuthViewModel,
     errorMessage: String,
+    onLogin: (String, String) -> Unit,
 ) {
 
     var login by remember { mutableStateOf("") }
@@ -179,9 +185,7 @@ fun AuthScreen(
             }
 
             Button(
-                onClick = {
-                    viewModel.login(login, password)
-                },
+                onClick = { onLogin(login, password) },
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(50.dp),
