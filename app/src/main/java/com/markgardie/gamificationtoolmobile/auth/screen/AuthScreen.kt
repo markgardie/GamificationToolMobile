@@ -25,6 +25,7 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -55,6 +56,12 @@ fun AuthScreenWrapper(
     var showError by remember { mutableStateOf(false) }
     var errorMessage by remember { mutableStateOf("") }
 
+    LaunchedEffect(uiState) {
+        if (uiState is AuthUiState.Success) {
+            onAuthSuccess()
+        }
+    }
+
 
     Scaffold(
         topBar = {
@@ -70,7 +77,7 @@ fun AuthScreenWrapper(
                 errorMessage = errorMessage,
                 onLogin = viewModel::login,
             )
-            is AuthUiState.Success -> onAuthSuccess()
+            is AuthUiState.Success -> {}
             is AuthUiState.Loading -> LoadingState(innerPadding = innerPadding)
             is AuthUiState.Error -> {
                 showError = true
