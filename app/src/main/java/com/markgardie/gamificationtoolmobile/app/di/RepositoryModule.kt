@@ -1,7 +1,9 @@
 package com.markgardie.gamificationtoolmobile.app.di
 
-import com.markgardie.gamificationtoolmobile.dashboard.DashboardRepository
-import com.markgardie.gamificationtoolmobile.dashboard.TestDashboardRepository
+import com.markgardie.gamificationtoolmobile.auth.repository.AuthRepository
+import com.markgardie.gamificationtoolmobile.auth.repository.NetworkAuthRepository
+import com.markgardie.gamificationtoolmobile.dashboard.repository.DashboardRepository
+import com.markgardie.gamificationtoolmobile.dashboard.repository.TestDashboardRepository
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
@@ -19,4 +21,7 @@ interface RepositoryModule {
     @TestRepository
     @Binds
     fun bindTestDashboardRepository(impl: TestDashboardRepository): DashboardRepository
+
+    @Binds
+    fun bindNetworkAuthRepository(impl: NetworkAuthRepository): AuthRepository
 }

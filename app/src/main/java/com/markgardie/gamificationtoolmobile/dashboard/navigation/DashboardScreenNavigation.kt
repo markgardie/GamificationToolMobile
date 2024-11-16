@@ -1,8 +1,9 @@
-package com.markgardie.gamificationtoolmobile.dashboard
+package com.markgardie.gamificationtoolmobile.dashboard.navigation
 
 import androidx.navigation.NavController
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.compose.composable
+import com.markgardie.gamificationtoolmobile.dashboard.screen.DashboardScreenWrapper
 
 
 const val dashboardScreenRoute = "dashboard_screen"
@@ -13,7 +14,6 @@ fun NavController.navigateToDashboard() {
 
 
 fun NavGraphBuilder.dashboardDestination(
-    dashboardViewModel: DashboardViewModel
 ) {
 
     composable(
@@ -21,6 +21,6 @@ fun NavGraphBuilder.dashboardDestination(
 
         ) {
 
-        DashboardScreenWrapper(dashboardViewModel)
+        DashboardScreenWrapper()
     }
 }

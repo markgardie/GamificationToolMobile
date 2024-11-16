@@ -1,5 +1,6 @@
-package com.markgardie.gamificationtoolmobile.dashboard
+package com.markgardie.gamificationtoolmobile.dashboard.repository
 
+import com.markgardie.gamificationtoolmobile.dashboard.model.PointSystem
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flowOf
 import javax.inject.Inject
