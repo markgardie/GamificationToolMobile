@@ -19,4 +19,8 @@ class NetworkAuthRepository @Inject constructor(
             NetworkResult.Error(e.message ?: "Unknown error occurred")
         }
     }
+
+    override fun logout() {
+        TokenManager.clearToken()
+    }
 }

@@ -29,7 +29,7 @@ fun GamificationNavHost() {
             startDestination = authScreenRoute,
         ) {
 
-            dashboardDestination()
+            dashboardDestination(navController)
             authDestination(navController)
 
         }
