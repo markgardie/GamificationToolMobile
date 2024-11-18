@@ -2,6 +2,7 @@ package com.markgardie.gamificationtoolmobile.dashboard.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.markgardie.gamificationtoolmobile.auth.repository.AuthRepository
 import com.markgardie.gamificationtoolmobile.core.model.NetworkResult
 import com.markgardie.gamificationtoolmobile.dashboard.repository.StudentRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -13,7 +14,8 @@ import javax.inject.Inject
 
 @HiltViewModel
 class DashboardViewModel @Inject constructor(
-    private val studentRepository: StudentRepository
+    private val studentRepository: StudentRepository,
+    private val authRepository: AuthRepository,
 ) : ViewModel() {
 
     private val _uiState = MutableStateFlow<DashboardUiState>(DashboardUiState.Loading)
@@ -45,5 +47,9 @@ class DashboardViewModel @Inject constructor(
 
     fun retry() {
         loadProfile()
+    }
+
+    fun logout() {
+        authRepository.logout()
     }
 }

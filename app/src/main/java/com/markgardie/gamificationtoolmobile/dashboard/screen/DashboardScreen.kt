@@ -11,6 +11,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.Logout
 import androidx.compose.material.icons.filled.Refresh
 import androidx.compose.material3.Button
 import androidx.compose.material3.CircularProgressIndicator
@@ -38,7 +39,8 @@ import com.markgardie.gamificationtoolmobile.dashboard.viewmodel.DashboardViewMo
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun DashboardScreenWrapper(
-    dashboardViewModel: DashboardViewModel = hiltViewModel()
+    dashboardViewModel: DashboardViewModel = hiltViewModel(),
+    onLogout: () -> Unit,
 ) {
     val uiState by dashboardViewModel.uiState.collectAsStateWithLifecycle()
 
@@ -51,6 +53,17 @@ fun DashboardScreenWrapper(
                         Icon(
                             imageVector = Icons.Default.Refresh,
                             contentDescription = "Оновити"
+                        )
+                    }
+                    IconButton(
+                        onClick = {
+                            dashboardViewModel.logout()
+                            onLogout()
+                        }
+                    ) {
+                        Icon(
+                            imageVector = Icons.AutoMirrored.Filled.Logout,
+                            contentDescription = "Вийти"
                         )
                     }
                 }

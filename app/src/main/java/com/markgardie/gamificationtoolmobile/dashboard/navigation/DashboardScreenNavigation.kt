@@ -3,6 +3,7 @@ package com.markgardie.gamificationtoolmobile.dashboard.navigation
 import androidx.navigation.NavController
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.compose.composable
+import com.markgardie.gamificationtoolmobile.auth.navigation.navigateToAuth
 import com.markgardie.gamificationtoolmobile.dashboard.screen.DashboardScreenWrapper
 
 
@@ -14,6 +15,7 @@ fun NavController.navigateToDashboard() {
 
 
 fun NavGraphBuilder.dashboardDestination(
+    navController: NavController
 ) {
 
     composable(
@@ -21,6 +23,6 @@ fun NavGraphBuilder.dashboardDestination(
 
         ) {
 
-        DashboardScreenWrapper()
+        DashboardScreenWrapper(onLogout = { navController.navigateToAuth() })
     }
 }
